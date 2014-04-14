@@ -12,45 +12,46 @@
 </head>
 
 <body class="wide">
-  <body>
-    <div ng-controller="PreloadCtrl" id="d">
-      <h1>Web Audio API: Binaural Sound Positioning</h1>
-      <p>W,S,A,D to move around. The mouse determines the position in which your nose is pointing. 
-      <em style="font-weight:800">Use headphones for binaural effect! </em>
-      </p>
-      <h2 ng-show="!ready()">Sounds loading...</h2>
-      <div ng-show="ready()"> 
-        <button ng-click="startMusic(0)">Play Music 1</button> 
-        <button ng-click="startMusic(1)">Play Music 2</button>
-        <button ng-click="startMusic(8,true)">Play noise</button> 
-        <button ng-click="startRobotWalking()">Walking Robot</button>
-        <br>
-        <button ng-click="makeItRain(interval)">Make it rain!</button>
-        <form>
-          Rain intensity<br>
-          <input type="radio" ng-model="interval" ng-click="setRainInterval(30)" value="30"> Heavy
-          <input type="radio" ng-model="interval" ng-click="setRainInterval(100)" value="100"> Moderate
-          <input type="radio" ng-model="interval" ng-click="setRainInterval(500)" value="500"> Low <br>
-          choose rain sound:
-          <input type="radio" name="s" ng-click="setRainSound(3)" value="500">
-          <input type="radio" name="s" ng-click="setRainSound(2)" value="500">
-          <input type="radio" name="s" ng-click="setRainSound(4)" value="500">
-          <input type="radio" name="s" ng-click="setRainSound(6)" value="500">
-          <input type="radio" name="s" ng-click="setRainSound(7)" value="500">
+  <a href="http://justgoscha.github.io/binaural-webaudio/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
-        </form>
+  <div ng-controller="PreloadCtrl" id="d">
+    <h1>Web Audio API: Binaural Sound Positioning</h1>
+    <p>W,S,A,D to move around. The mouse determines the position in which your nose is pointing. 
+    <em style="font-weight:800">Use headphones for binaural effect! </em>
+    </p>
+    <h2 ng-show="!ready()">Sounds loading...</h2>
+    <div ng-show="ready()"> 
+      <button ng-click="startMusic(0)">Play Music 1</button> 
+      <button ng-click="startMusic(1)">Play Music 2</button>
+      <button ng-click="startMusic(8,true)">Play noise</button> 
+      <button ng-click="startRobotWalking()">Walking Robot</button>
+      <br>
+      <button ng-click="makeItRain(interval)">Make it rain!</button>
+      <form>
+        Rain intensity<br>
+        <input type="radio" ng-model="interval" ng-click="setRainInterval(30)" value="30"> Heavy
+        <input type="radio" ng-model="interval" ng-click="setRainInterval(100)" value="100"> Moderate
+        <input type="radio" ng-model="interval" ng-click="setRainInterval(500)" value="500"> Low <br>
+        choose rain sound:
+        <input type="radio" name="s" ng-click="setRainSound(3)" value="500">
+        <input type="radio" name="s" ng-click="setRainSound(2)" value="500">
+        <input type="radio" name="s" ng-click="setRainSound(4)" value="500">
+        <input type="radio" name="s" ng-click="setRainSound(6)" value="500">
+        <input type="radio" name="s" ng-click="setRainSound(7)" value="500">
+
+      </form>
 
 <!--         <input type="text" ng-model="interval" placeholder="raindrop interval in ms">
-        <br> -->
+      <br> -->
 <!--         <button ng-click="startXTimes(times)">Start sample {{times}} times</button>
-        <input type="text" ng-model="times" placeholder="type in how often, man"> -->
-      </div>
-      <canvas width="800" height="500" id="canvas" listenermove></canvas>
-    
-      <p style="color:#9ac">by <a href="http://justgoscha.github.io">justGoscha</a></p>
-
+      <input type="text" ng-model="times" placeholder="type in how often, man"> -->
     </div>
-  </body>
+    <canvas width="800" height="500" id="canvas" listenermove></canvas>
+  
+    <p style="color:#9ac">by <a href="http://justgoscha.github.io">justGoscha</a></p>
+
+  </div>
+
 
 
 <!-- Script loading -->
