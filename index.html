@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>My Angular Require Seed</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+
+
+</head>
+
+<body class="wide">
+  <body>
+    <div ng-controller="PreloadCtrl" id="d">
+      <h1>Web Audio API: Binaural Sound Positioning</h1>
+      <p>W,S,A,D to move around. The mouse determines the position in which your nose is pointing. 
+      <em style="font-weight:800">Use headphones for binaural effect! </em>
+      </p>
+      <h2 ng-show="!ready()">Sounds loading...</h2>
+      <div ng-show="ready()"> 
+        <button ng-click="startMusic(0)">Play Music 1</button> 
+        <button ng-click="startMusic(1)">Play Music 2</button>
+        <button ng-click="startMusic(8,true)">Play noise</button> 
+        <button ng-click="startRobotWalking()">Walking Robot</button>
+        <br>
+        <button ng-click="makeItRain(interval)">Make it rain!</button>
+        <form>
+          Rain intensity<br>
+          <input type="radio" ng-model="interval" ng-click="setRainInterval(30)" value="30"> Heavy
+          <input type="radio" ng-model="interval" ng-click="setRainInterval(100)" value="100"> Moderate
+          <input type="radio" ng-model="interval" ng-click="setRainInterval(500)" value="500"> Low <br>
+          choose rain sound:
+          <input type="radio" name="s" ng-click="setRainSound(3)" value="500">
+          <input type="radio" name="s" ng-click="setRainSound(2)" value="500">
+          <input type="radio" name="s" ng-click="setRainSound(4)" value="500">
+          <input type="radio" name="s" ng-click="setRainSound(6)" value="500">
+          <input type="radio" name="s" ng-click="setRainSound(7)" value="500">
+
+        </form>
+
+<!--         <input type="text" ng-model="interval" placeholder="raindrop interval in ms">
+        <br> -->
+<!--         <button ng-click="startXTimes(times)">Start sample {{times}} times</button>
+        <input type="text" ng-model="times" placeholder="type in how often, man"> -->
+      </div>
+      <canvas width="800" height="500" id="canvas" listenermove></canvas>
+    
+      <p style="color:#9ac">by <a href="http://justgoscha.github.io">justGoscha</a></p>
+
+    </div>
+  </body>
+
+
+<!-- Script loading -->
+<script data-main="script/main.js" src="script/lib/require.js"></script>
+
+</body>
+</html>
